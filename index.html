@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes Manager</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+        <div id="timer">00:36:20</div>
+        <div id="class">CS 61A Lecture</div>
+        <div id="shellbar"></div>
+        <div id="bar"></div>
+        <div id="schedule">
+            <div id="schedulelabel">Monday</div>
+        </div>
+        <button id="settingsButton" onclick="openSettings()">A</button>
+        <div id="gear0"></div>
+        <div id="gear1"></div>
+        <div id="gear2"></div>
+        <div id="gear3"></div>
+        <div id="gear4"></div>
+        <div id="gear5"></div>
+    </div>
+    <div id="settings" style="display:none">
+        <button id="settingsButton" onclick="closeSettings()">A</button>
+        <div id="gear0"></div>
+        <div id="gear6"></div>
+        <div id="gear7"></div>
+        <div id="settingslabel">Settings</div>
+        <div id="colorlabel">Color Theme</div>
+        <input type="text" id="color1">
+        <input type="text" id="color2">
+        <div id="monday">
+            <div class="daylabel">Monday</div>
+            <button id="mondaynewitem" class="newitem" onclick="newItem('monday')">New Class</button>
+        </div>
+        <div id="tuesday">
+            <div class="daylabel">Tuesday</div>
+            <button id="tuesdaynewitem" class="newitem" onclick="newItem('tuesday')">New Class</button>
+        </div>
+        <div id="wednesday">
+            <div class="daylabel">Wednesday</div>
+            <button id="wednesdaynewitem" class="newitem" onclick="newItem('wednesday')">New Class</button>
+        </div>
+        <div id="thursday">
+            <div class="daylabel">Thursday</div>
+            <button id="thursdaynewitem" class="newitem" onclick="newItem('thursday')">New Class</button>
+        </div>
+        <div id="friday">
+            <div class="daylabel">Friday</div>
+            <button id="fridaynewitem" class="newitem" onclick="newItem('friday')">New Class</button>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+  </body>
+</html>
