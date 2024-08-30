@@ -13,7 +13,9 @@ var schedule=[];
 var currentItem="No Classes Today";
 var color1="#1574e8";
 var color2="#26b8dd";
-
+if(window.screen.width==1280){
+    document.body.style.zoom = "75%";
+}
 class Item{
     constructor(name,starthour,startminute,endhour,endminute){
         this.name=name;
@@ -84,7 +86,14 @@ function loadData(){
 
 function updateCurrent(){
     var date=new Date();
-    //UPDATE TODAY
+    var day=date.getDay();
+	if(day==0) today="Sunday";
+	else if(day==1) today="Monday";
+	else if(day==2) today="Tuesday";
+	else if(day==3) today="Wednesday";
+	else if(day==4) today="Thursday";
+	else if(day==5) today="Friday";
+	else if(day==6) today="Saturday";
     document.getElementById("schedulelabel").innerHTML=today;
     if(today=="Monday"){
         schedule=monday;
